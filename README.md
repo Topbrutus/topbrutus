@@ -8,6 +8,43 @@ Mon objectif n’est pas de créer une seule IA qui prétend tout savoir. Je bâ
 
 > **Construire petit. Vérifier. Cloner. Étendre.**
 
+
+## ∞ Horloge de la Vie — formulation XYZ / stéréo Z
+
+**Publication d’antériorité : 20 septembre 2026**
+
+Je documente publiquement une **formulation expérimentale développée dans Antmux / Horloge de la Vie**, afin de laisser une trace datée, lisible et vérifiable de l’état actuel de mes travaux.
+
+Mots-clés : **TopBrutus · Horloge de la Vie · XYZ · stéréo Z · angle d’Euler · +θ / −θ · Antmux**.
+
+Le principe actuel part d’un même état (Z), envoyé dans deux calculs synchronisés à la source :
+
+[
+Z_G = C(+\theta),Z
+]
+
+[
+Z_D = C(-\theta),Z
+]
+
+Les deux branches restent distinctes — gauche et droite — puis peuvent produire une synthèse bilatérale :
+
+[
+B = \frac{Z_G + Z_D}{2}
+]
+
+La phase cyclique utilisée dans l’implémentation actuelle est :
+
+[
+\theta(t)=2\pi\frac{t\bmod7200}{7200}
+]
+
+La règle importante est que **l’opposition (+\theta / -\theta) appartient au calcul**, pas au rendu visuel : aucune rotation d’image ni miroir visuel ne sont nécessaires.
+
+Cette publication décrit une **architecture mathématique expérimentale et son antériorité publique**. Elle ne constitue pas, à elle seule, la démonstration d’une nouvelle loi fondamentale de la nature.
+
+→ Projet public : [Antmux](https://github.com/Topbrutus/Antmux)
+
 ## 🧠 Vision
 
 Top Brutus réunit plusieurs projets autour d’une même direction :
